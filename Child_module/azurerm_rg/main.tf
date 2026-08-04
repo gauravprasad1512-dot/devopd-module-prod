@@ -1,7 +1,7 @@
 variable "rgs" {}
 resource "azurerm_resource_group" "rg1" {
     for_each = var.rgs
-        name = each.key
+        name = each.value.name
         location = each.value.Location
 
     }
