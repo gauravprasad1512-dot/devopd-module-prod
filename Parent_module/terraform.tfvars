@@ -1,5 +1,10 @@
 resource_g = {
-  RG_GRV = {
+  RG1 = {
+    name = "RG_GRV"
+    Location = "centralIndia"
+}
+  RG2 = {
+    name = "RG_KB"
     Location = "centralIndia"
 }
 }
