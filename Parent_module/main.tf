@@ -4,6 +4,9 @@ variable "vn_g" {}
 variable "sn_g" {}
 variable "pip" {}
 variable "nikku" {}
+variable "vir" {
+  
+}
 
 module "RG" {
   source = "../Child_module/azurerm_rg"
@@ -39,4 +42,10 @@ module "nica" {
 depends_on = [ module.sub_g, module.PUB ]
  source = "../Child_module/azurerm_NIC"
  nics =  var.nikku
+}
+
+module "vmm" {
+  depends_on = [ module.sub_g ]
+  source = "../Child_module/azurerm_vm"
+  vms = var.vir
 }
