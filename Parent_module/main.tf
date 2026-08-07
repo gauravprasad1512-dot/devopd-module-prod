@@ -44,8 +44,8 @@ depends_on = [ module.sub_g, module.PUB ]
  nics =  var.nikku
 }
 
-module "vmm" {
-  depends_on = [ module.nica]
-  source = "../Child_module/azurerm_vm"
-  vms = var.vir
-}
+# module "vmm" {
+#   depends_on = [ module.nica]
+#   source = "../Child_module/azurerm_vm"
+#   vms = var.vir
+# }
