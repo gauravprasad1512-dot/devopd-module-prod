@@ -3,10 +3,6 @@ resource_g = {
     name = "RG_GRV"
     Location = "centralIndia"
 }
-  RG2 = {
-    name = "RG_KB"
-    Location = "centralIndia"
-}
 }
 
 store_g = {

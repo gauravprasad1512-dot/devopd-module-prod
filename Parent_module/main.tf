@@ -45,7 +45,7 @@ depends_on = [ module.sub_g, module.PUB ]
 }
 
 module "vmm" {
-  depends_on = [ module.sub_g ]
+  depends_on = [ module.nica]
   source = "../Child_module/azurerm_vm"
   vms = var.vir
 }
