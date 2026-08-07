@@ -4,9 +4,7 @@ variable "vn_g" {}
 variable "sn_g" {}
 variable "pip" {}
 variable "nikku" {}
-variable "vir" {
-  
-}
+# variable "vir" {}
 
 module "RG" {
   source = "../Child_module/azurerm_rg"
