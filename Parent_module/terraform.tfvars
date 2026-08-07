@@ -7,7 +7,7 @@ resource_g = {
 
 store_g = {
 
-  grvstorage1512 = {
+  grv15122026st01 = {
 
     rg  = "RG_GRV"
     loc = "Central India"
@@ -90,7 +90,7 @@ vir = {
     name = "frontend-vm"
     rg = "RG_GRV"
     loc = "centralIndia"
-    size = "Standard_E2s_v3"
+    size = "Standard_B2s"
     admin_username      = "ergpaua"
     admin_password    = "Grv@1512"
     nic_name= "frontend_nic"
@@ -99,7 +99,7 @@ vm2 = {
     name = "backend-vm"
     rg = "RG_GRV"
     loc = "centralIndia"
-    size = "Standard_E2s_v3"
+    size = "Standard_B2s"
     admin_username      = "ergpaua"
     admin_password    = "Grv@1512"
     nic_name= "backend_nic"
