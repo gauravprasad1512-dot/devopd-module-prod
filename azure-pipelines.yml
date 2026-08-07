@@ -9,20 +9,27 @@ steps:
 - checkout: self
   displayName: 'Checkout repository'
 
+# Install Terraform
 - script: |
+    wget -O terraform.zip https://releases.hashicorp.com/terraform/1.12.2/terraform_1.12.2_linux_amd64.zip
+    unzip terraform.zip
+    sudo mv terraform /usr/local/bin/
     terraform --version
-  displayName: 'Check Terraform Version'
+  displayName: 'Install Terraform'
 
+# Terraform Init
 - script: |
     terraform init
   workingDirectory: '$(System.DefaultWorkingDirectory)/Parent_module'
   displayName: 'Terraform Init'
 
+# Terraform Validate
 - script: |
     terraform validate
   workingDirectory: '$(System.DefaultWorkingDirectory)/Parent_module'
   displayName: 'Terraform Validate'
 
+# Terraform Plan
 - script: |
     terraform plan -input=false
   workingDirectory: '$(System.DefaultWorkingDirectory)/Parent_module'
